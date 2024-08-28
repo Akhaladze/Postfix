@@ -1,19 +1,18 @@
 version: '3.7'
-
 services:
   postfix:
     build: .
     container_name: postfix
     restart: unless-stopped
     environment:
-      - HOSTNAME=yourdomain.com
+      - HOSTNAME=mbit-post.local
     ports:
       - "25:25"
       - "587:587"
     volumes:
       - ./main.cf:/etc/postfix/main.cf
-      - ./sasl_passwd:/etc/postfix/sasl_passwd
-      - ./entrypoint.sh:/entrypoint.sh
+    #  - ./sasl_passwd:/etc/postfix/sasl_passwd
+    #  - ./entrypoint.sh:/entrypoint.sh
     networks:
       - postfix-net
 
