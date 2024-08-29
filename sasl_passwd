@@ -1,1 +1,1 @@
-[smtp.gmail.com]:587    user=my_example_user.apps.googleusercontent.com:EXAMPLE_ACCESS_TOKEN
+[smtp.gmail.com]:587    user=user-name@domain.com

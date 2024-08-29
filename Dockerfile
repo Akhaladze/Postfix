@@ -1,9 +1,8 @@
 FROM debian:buster-slim
-
+# gitlab.mbit-consultants.com:5678/infra/postfix
 # Install Postfix and necessary dependencies
-RUN apt-get update && \
-    apt-get install -y postfix libsasl2-modules mailutils ca-certificates && \
-    apt-get clean
+RUN apt-get update && apt-get install -y postfix libsasl2-modules mailutils ca-certificates
+RUN apt-get install -y mc
 
 # Copy configuration files
 COPY main.cf /etc/postfix/main.cf

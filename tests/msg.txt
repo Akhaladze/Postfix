@@ -1,0 +1,5 @@
+From: "Your Name" <you@example.com>
+To: "Recipient Name" <recipient@example.com>
+Subject: Test email using Gmail API OAuth
+
+This is a test email sent using OAuth 2.0 with Gmail's SMTP.

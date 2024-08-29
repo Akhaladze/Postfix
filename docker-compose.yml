@@ -2,15 +2,16 @@ version: '3.7'
 services:
   postfix:
     build: .
+    image: gitlab.mbit-consultants.com:5678/infra/postfix:latest
     container_name: postfix
     restart: unless-stopped
     environment:
-      - HOSTNAME=mbit-post.local
+      - HOSTNAME=postfix.local
     ports:
       - "25:25"
       - "587:587"
-    volumes:
-      - ./main.cf:/etc/postfix/main.cf
+    #volumes:
+    #  - ./main.cf:/etc/postfix/main.cf
     #  - ./sasl_passwd:/etc/postfix/sasl_passwd
     #  - ./entrypoint.sh:/entrypoint.sh
     networks:
