@@ -10,8 +10,8 @@ services:
     ports:
       - "25:25"
       - "587:587"
-    #volumes:
-    #  - ./main.cf:/etc/postfix/main.cf
+    volumes:
+      - ./main.cf:/etc/postfix/main.cf
     #  - ./sasl_passwd:/etc/postfix/sasl_passwd
     #  - ./entrypoint.sh:/entrypoint.sh
     networks:
